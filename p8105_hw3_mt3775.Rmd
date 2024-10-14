@@ -92,6 +92,7 @@ avg_max_01_07_plot =
   )
 avg_max_01_07_plot
 ```
+
 We see that the average maximum temperature in July is considerably higher than 
 in January which makes sense since summer is hotter than winter. Over time 
 though, the temperatures oscillate back and forth with no consistent pattern
@@ -100,7 +101,7 @@ the highest. There are some particularly cool January's, such as in the early
 1980s, and a particularly cool July in the late 1980s. 
 
 #### tmax vs. tmin
-```{r more_plots, fig.height = 4, fig.width = 8}
+```{r more_plots, fig.height = 4, fig.width = 10}
 tmax_v_tmin = 
   ggplot(cleaned_noaa, aes(x = tmax, y = tmin)) + 
   geom_hex() +
@@ -127,6 +128,7 @@ library(patchwork)
 tmax_v_tmin + snowfall_dist_plot 
   
 ```
+
 Looking at the hexplot of `tmax` vs `tmin` for the full dataset, the most
 common maximum temperatures are between 0 and 30 degrees Celsius and 0 to 30
 for the minimum temperature as well. As for snowfall, with so many years, it
@@ -296,6 +298,7 @@ time_course_plot =
   ggtitle("24-hour Activity Time Courses Across Sex and Education")
 time_course_plot
 ```
+
 The trend lines across education levels for female vs male participants' hourly
 MIMS look similar, but for those with more than a high school education, there
 appear to be some observations that have much higher activity levels, with
